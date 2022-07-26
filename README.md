@@ -2,6 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
+## NOTAS:
+
+El uso de la API está documentado en el siguiente repositorio de github: https://github.com/nasa/apod-api
+
+El desarrollo de los servicios que consumen la API se ha realizado teniendo en cuenta los condicionantes
+de la propia API. 
+
+De este modo se ha creado un método para obtener un listado de imágenes que van desde la 
+fecha pasada por parámetros hasta N días antes, siendo N un parámetro numérico que resta esos N días a la 
+fecha introducida como primer parámetro (el componente al suscribirse al observable se encarga de seleccionar 
+la fecha del día actual).
+
+El otro método del servicio peticiona una imagen dada una fecha.
+
+Como la API puede devolver tanto imágenes como vídeos, en la documentación de la misma se indica el uso opcional
+de un parámetro 'thumbs' booleano, el cual, informado a true, trae un dato adicional en la respuesta, 'thumbnail_url'
+el cual trae una url de una imagen (thumb) representativa del vídeo. En ambos métodos para consumir la API se 
+ha informado dicho parámetro con el valor true para obtenerlo y usarlo.
+
+Se ha optado por no hacer uso de las imágenes en hd por su elevado tamaño y consumo de datos, sobre todo en 
+dispositivos móviles.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

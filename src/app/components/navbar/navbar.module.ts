@@ -11,6 +11,9 @@ import { NavbarComponent } from './navbar.component';
   imports: [
     CommonModule,
     MatToolbarModule
+  ],
+  exports: [
+    NavbarComponent
   ]
 })
 export class NavbarModule { }

@@ -1,0 +1,40 @@
+@media (max-width: 480px) {
+
+    .mat-toolbar {
+        padding-right: 5px;
+    }
+
+    .toolbar-title {
+        font-size: small;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+}
+
+@media (min-width: 480px) {
+
+    .toolbar-title {
+        font-size: large;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+}
+
+.toolbar {
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.toolbar-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}

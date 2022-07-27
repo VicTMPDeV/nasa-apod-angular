@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PictureDto } from 'src/app/models/pictureDto.interface';
 
 @Component({
   selector: 'app-card-picture',
@@ -8,6 +9,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CardPictureComponent {
 
   @Input('pictureData')
-  public picture!:any; //TODO  -> borrar any y sustituir por el modelo una vez creado
+  public picture!:PictureDto;
 
 }

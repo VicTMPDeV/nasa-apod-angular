@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<div *ngIf="picturesList.length != 0; else noResponseYet">
+    <div fxLayoutAlign="center" fxLayoutGap="16px" fxLayout="row wrap" fxLayout.xs="column">
+        <div *ngFor="let picture of picturesList" fxFlex="20" fxFlex.lg="30" fxFlex.sm="30">
+            <app-card-picture [pictureData]="picture" [routerLink]="['/detail', picture.date]"></app-card-picture>
+        </div>
+    </div>
+</div>
+<ng-template #noResponseYet>
+    <mat-spinner color="warn"></mat-spinner>
+</ng-template>

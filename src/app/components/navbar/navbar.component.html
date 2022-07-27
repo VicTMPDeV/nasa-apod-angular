@@ -1,13 +1,10 @@
 <mat-toolbar class="toolbar" color="primary">
-    <div *ngIf="onDashBoardPage; else onDetailPage" class="logo-container">
-      <a href="https://github.com/VicTMPDeV/AngularMoviesApp" target="_blank" #link>
-        <img class="logo" [src]="logoImage" />
-      </a>
+    <div *ngIf="onDashBoardPage; else onDetailPage" class="toolbar-title">
+        <span>NASA Astronomy Picture Of the Day</span>
     </div>
     <ng-template #onDetailPage>
-      <button mat-icon-button (click)="goBack()">
-        <mat-icon>arrow_back</mat-icon>
-      </button>
+        <button mat-icon-button (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
     </ng-template>
-    <span class="toolbar-title">NASA Astronomy Picture Of the Day</span>
-  </mat-toolbar>
+</mat-toolbar>

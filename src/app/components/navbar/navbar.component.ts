@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { NavigationService } from 'src/app/shared/services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  private readonly mainUrl: string[] = ['/','/dashboard']; 
+  public onDashBoardPage: boolean = JSON.parse(localStorage.getItem('onDashBoardPage')!) ?? true;
+  public logoImage: string = '../../../assets/images/logoVictorFilled.png';
+
+  constructor(private _navigationService: NavigationService){}
 
   ngOnInit(): void {
+    this._navigationService.getCurrentUrl()
+      .subscribe((currentUrl: string) => {
+        (this.mainUrl.includes(currentUrl)) ? this.onDashBoardPage = true : this.onDashBoardPage = false;
+        localStorage.setItem('onDashBoardPage', JSON.stringify(this.onDashBoardPage));
+      });
+  }
+
+  public goBack(): void {
+    this._navigationService.getBackLocation();
   }
 
 }

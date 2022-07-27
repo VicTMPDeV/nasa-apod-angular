@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from "@angular/material/card";
 import { CardPictureComponent } from './card-picture.component';
+import { ImagePipeModule } from 'src/app/shared/pipes/image.module';
 
 
 
@@ -11,7 +12,8 @@ import { CardPictureComponent } from './card-picture.component';
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    ImagePipeModule
   ],
   exports: [
     CardPictureComponent

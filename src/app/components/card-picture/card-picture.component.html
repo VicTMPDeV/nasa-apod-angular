@@ -1,10 +1,11 @@
 <mat-card>
     <mat-card-header>
-        <mat-card-title>TITULO</mat-card-title>
+        <mat-card-title>{{picture.title}}</mat-card-title>
     </mat-card-header>
 
+    <img [src]="picture | image" alt="">
 
     <mat-card-content>
-        <strong>FECHA</strong>
+        <strong>{{picture.date}}</strong>
     </mat-card-content>
 </mat-card>

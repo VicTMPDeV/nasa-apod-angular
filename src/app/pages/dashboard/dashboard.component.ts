@@ -20,7 +20,6 @@ export class DashboardComponent implements OnInit {
     .pipe(tap(console.log))  
     .subscribe(response => {
         this.picturesList = response;
-        this._nasaApiServices.picturesList = this.picturesList;
       });
   }
 

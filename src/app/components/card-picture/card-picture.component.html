@@ -1,6 +1,6 @@
 <mat-card class="mat-card--dashboard">
     <mat-card-header class="mat-card-header--dashboard">
-        <mat-card-title class="mat-card-header-text--dashboard">{{picture.title | slice:0:30}}</mat-card-title>
+        <mat-card-title class="mat-card-header-text--dashboard">{{picture.title | truncateText:30}}</mat-card-title>
     </mat-card-header>
 
     <img mat-card-image [src]="picture | image" [alt]="picture.title">

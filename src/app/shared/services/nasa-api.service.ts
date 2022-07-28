@@ -13,7 +13,6 @@ export class NasaApiService {
   private APODEndpoint: string = 'apod'; 
   private queryParams: HttpParams = new HttpParams();
   private readonly thumbValue: boolean = true;
-  public picturesList: PictureDto[] = [];
 
   constructor( private _utils: UtilsService,
                private _http: HttpClient ) { }

@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TruncateTextPipe } from "./truncate-text.pipe";
-
+import { I18nDatePipe } from './i18n-date.pipe';
 
 
 @NgModule({
   declarations: [
-    TruncateTextPipe
+    I18nDatePipe
   ],
   imports: [
     CommonModule
-  ], 
+  ],
   exports: [
-    TruncateTextPipe
+    I18nDatePipe
   ]
 })
-export class TruncateTextPipeModule { }
+export class I18nDatePipeModule { }

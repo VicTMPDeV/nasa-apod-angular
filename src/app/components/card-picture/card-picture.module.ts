@@ -4,8 +4,8 @@ import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from '@angular/material/icon';
 import { CardPictureComponent } from './card-picture.component';
 import { ImagePipeModule } from 'src/app/shared/pipes/image-pipe/image.module';
-import { TruncateTextModule } from '../../shared/pipes/truncate-text-pipe/truncate-text.module';
-
+import { TruncateTextPipeModule } from '../../shared/pipes/truncate-text-pipe/truncate-text.module';
+import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-date.module';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { TruncateTextModule } from '../../shared/pipes/truncate-text-pipe/trunca
     MatIconModule,
     MatCardModule,
     ImagePipeModule,
-    TruncateTextModule
+    I18nDatePipeModule,
+    TruncateTextPipeModule
   ],
   exports: [
     CardPictureComponent

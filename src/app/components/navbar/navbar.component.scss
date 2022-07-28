@@ -4,37 +4,36 @@
         padding-right: 5px;
     }
 
-    .toolbar-title {
-        font-size: small;
-    }
-
-    .logo {
-        width: 40px;
+    .toolbar {
+        font-size: large;
     }
 
 }
 
 @media (min-width: 480px) {
 
-    .toolbar-title {
-        font-size: large;
-    }
-
-    .logo {
-        width: 50px;
+    .toolbar {
+        font-size: x-large;
     }
 
 }
 
-.toolbar {
-    justify-content: center;
+.mat-toolbar {
+    align-content: stretch;
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.toolbar-title {
+.mat-toolbar__content {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 }
+
+.main-title {
+    margin-left: 10px;
+}
+
+.back-title {
+    margin-left: 15px;
+}
+

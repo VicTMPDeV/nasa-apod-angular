@@ -1,10 +1,11 @@
 <mat-toolbar class="toolbar" color="primary">
-    <div *ngIf="onDashBoardPage; else onDetailPage" class="toolbar-title">
-        <span>NASA Astronomy Picture Of the Day</span>
+    <div *ngIf="onDashBoardPage; else onDetailPage">
+        <span class="main-title">NASA - Astronomy Picture Of the Day</span>
     </div>
     <ng-template #onDetailPage>
-        <button mat-icon-button (click)="goBack()">
+        <button mat-raised-button color="primary" (click)="goBack()">
             <mat-icon>arrow_back</mat-icon>
+            <span class="back-title">Volver a Dashboard</span>
         </button>
     </ng-template>
 </mat-toolbar>

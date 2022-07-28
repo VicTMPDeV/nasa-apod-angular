@@ -3,9 +3,9 @@
         <mat-card-title>{{picture.title}}</mat-card-title>
     </mat-card-header>
 
-    <img [src]="picture | image" alt="">
+    <img mat-card-image [src]="picture | image" [alt]="picture.title">
 
     <mat-card-content>
-        <strong>{{picture.date}}</strong>
+        <em>Fecha: {{picture.date}}</em>
     </mat-card-content>
 </mat-card>

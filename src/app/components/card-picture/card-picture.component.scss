@@ -1,2 +1,24 @@
+.mat-card--dashboard {
+    border-radius: 25px;
+}
 
+.mat-card-header--dashboard {
+    justify-content: center;
+    align-items: center;
+}
 
+.mat-card-header-text--dashboard {
+    font-size: medium;
+}
+
+.mat-card-content--dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: small;
+}
+
+mat-card img {
+    object-fit: cover;
+    height: 250px;
+}

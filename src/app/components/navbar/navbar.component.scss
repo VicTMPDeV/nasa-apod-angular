@@ -1,39 +1,31 @@
 @media (max-width: 480px) {
 
-    .mat-toolbar {
-        padding-right: 5px;
-    }
-
-    .toolbar {
+    .mat-toolbar__content {
         font-size: large;
+        padding-right: 5px;
     }
 
 }
 
 @media (min-width: 480px) {
 
-    .toolbar {
+    .mat-toolbar__content {
         font-size: x-large;
     }
 
 }
 
-.mat-toolbar {
+.mat-toolbar__content {
     align-content: stretch;
+    padding: 25px;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.mat-toolbar__content {
-    display: flex;
-}
-
-.main-title {
-    margin-left: 10px;
-}
-
 .back-title {
     margin-left: 15px;
 }
+
 

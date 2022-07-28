@@ -1,6 +1,6 @@
-<mat-toolbar class="toolbar" color="primary">
+<mat-toolbar class="mat-toolbar__content" color="primary">
     <div *ngIf="onDashBoardPage; else onDetailPage">
-        <span class="main-title">NASA - Astronomy Picture Of the Day</span>
+        <span>NASA - Astronomy Picture Of the Day</span>
     </div>
     <ng-template #onDetailPage>
         <button mat-raised-button color="primary" (click)="goBack()">

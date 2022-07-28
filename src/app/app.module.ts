@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarModule } from './components/navbar/navbar.module';
+import { FooterModule } from './components/footer/footer.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NavbarModule } from './components/navbar/navbar.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NavbarModule
+    NavbarModule,
+    FooterModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

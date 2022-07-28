@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
 
-    .mat-toolbar__content {
+    .mat-toolbar__container {
         font-size: large;
         padding-right: 5px;
     }
@@ -9,13 +9,14 @@
 
 @media (min-width: 480px) {
 
-    .mat-toolbar__content {
+    .mat-toolbar__container {
         font-size: x-large;
     }
 
 }
 
-.mat-toolbar__content {
+.mat-toolbar__container {
+    display: flex;
     align-content: stretch;
     padding: 25px;
     align-items: center;
@@ -24,8 +25,27 @@
     z-index: 2;
 }
 
+.mat-toolbar__items {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
 .back-title {
     margin-left: 15px;
+}
+
+.mat-toolbar__items-logo {
+    display: flex;
+    width: 50px;
+}
+
+.mat-toolbar__items-title {
+    margin-left: 15px;
+}
+
+.mat-toolbar__items-back-button {
+    background-color: #033A92;
 }
 
 

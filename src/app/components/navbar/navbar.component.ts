@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
 
   private readonly mainUrl: string[] = ['/','/dashboard']; 
   public onDashBoardPage: boolean = JSON.parse(localStorage.getItem('onDashBoardPage')!) ?? true;
+  public logoImage: string = '../../../assets/img/nasa-favicon.png';
 
   constructor(private _navigationService: NavigationService){}
 

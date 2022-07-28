@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
 
-    .mat-toolbar__container {
+    .mat-toolbar__header {
         font-size: large;
         padding-right: 5px;
     }
@@ -9,13 +9,13 @@
 
 @media (min-width: 480px) {
 
-    .mat-toolbar__container {
+    .mat-toolbar__header {
         font-size: x-large;
     }
 
 }
 
-.mat-toolbar__container {
+.mat-toolbar__header {
     display: flex;
     align-content: stretch;
     padding: 25px;

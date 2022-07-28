@@ -17,9 +17,10 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this._nasaApiServices.getPicturesList(this.today, 5) //PUT CONSTANTS 5
-    .pipe(tap(console.log))  
-    .subscribe(response => {
-        this.picturesList = response;
+      .subscribe((response: PictureDto[]) => {
+        response.forEach(element => {
+          this.picturesList.unshift(element);
+        });
       });
   }
 

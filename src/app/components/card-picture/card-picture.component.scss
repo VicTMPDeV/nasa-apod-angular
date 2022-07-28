@@ -1,17 +1,17 @@
-.mat-card--dashboard {
+.mat-card__dashboard {
     border-radius: 25px;
 }
 
-.mat-card-header--dashboard {
+.mat-card-header__dashboard {
     justify-content: center;
     align-items: center;
 }
 
-.mat-card-header-text--dashboard {
+.mat-card-header-text__dashboard {
     font-size: medium;
 }
 
-.mat-card-content--dashboard {
+.mat-card-content__dashboard {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -21,4 +21,14 @@
 mat-card img {
     object-fit: cover;
     height: 250px;
+}
+
+.mat-card-image__dashboard-play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
 }

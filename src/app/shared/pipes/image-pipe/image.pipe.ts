@@ -1,18 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { PictureDto } from 'src/app/models/pictureDto.interface';
+import { MediaType } from "src/app/models/media-type.interface";
 
 @Pipe({
-  name: 'image'
+  name: 'imagePipe'
 })
 export class ImagePipe implements PipeTransform {
-  //TODO-> Desarrollar lógica entorno al mediaType que es un enum
+
   transform(picture: PictureDto): string {
-    if(picture.url && picture.media_type === 'image'){
-      return picture.url;
+    if(picture.media_type === MediaType.Image){
+      return picture?.url || '../../../../assets/img/no_image_available.jpg';
+    }else if(picture.media_type === MediaType.Video){
+      return picture?.thumbnail_url || '../../../../assets/img/no_image_available.jpg'; 
     }else{
-      
+      return '../../../../assets/img/no_image_available.jpg';//mover a constantes de ruta
     }
-    return (picture.url) ? picture.url : 'assets/images/no_image_available.jpg';
   }
 
 }

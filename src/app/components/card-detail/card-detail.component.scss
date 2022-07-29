@@ -1,0 +1,44 @@
+.mat-card__detail {
+    border-radius: 25px;
+}
+
+.mat-card-header__detail {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.mat-card-header-text__detail {
+    font-size: x-large;
+    padding-bottom: 5px;
+}
+
+.mat-card-content__detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.mat-card-content__detail > p {
+    font-size: medium;
+}
+
+.mat-card-content__detail > em {
+    font-size: smaller;
+}
+
+mat-card img {
+    object-fit: cover;
+    height: 350px;
+}
+
+.mat-card-image__detail-play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+}

@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { DashboardComponent } from './dashboard.component';
+import { CardListModule } from '../../components/card-list/card-list.module';
+import { SpinnerModule } from '../../components/spinner/spinner.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import { CardPictureModule } from '../../components/card-picture/card-picture.module';
+import { DashboardComponent } from './dashboard.component';
 
 
 @NgModule({
@@ -15,8 +15,8 @@ import { CardPictureModule } from '../../components/card-picture/card-picture.mo
     CommonModule,
     DashboardRoutingModule,
     FlexLayoutModule,
-    CardPictureModule,
-    MatProgressSpinnerModule
+    CardListModule,
+    SpinnerModule
   ]
 })
 export class DashboardModule { }

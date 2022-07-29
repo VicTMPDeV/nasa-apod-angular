@@ -1,20 +1,19 @@
-.mat-card__dashboard {
+.mat-card__list {
     border-radius: 25px;
 }
 
-.mat-card-header__dashboard {
+.mat-card-header__list {
     justify-content: center;
     align-items: center;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-.mat-card-header-text__dashboard {
-    font-size: 15px;
-    margin: 0px;
+.mat-card-header-text__list {
+    font-size: medium;
 }
 
-.mat-card-content__dashboard {
+.mat-card-content__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -27,7 +26,7 @@ mat-card img {
     height: 250px;
 }
 
-.mat-card-image__dashboard-play {
+.mat-card-image__list-play {
     position: absolute;
     left: 0;
     top: 0;

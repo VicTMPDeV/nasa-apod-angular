@@ -2,6 +2,7 @@
     border-radius: 25px;
 }
 
+// Header
 .mat-card-header__list {
     justify-content: center;
     align-items: center;
@@ -13,14 +14,7 @@
     font-size: medium;
 }
 
-.mat-card-content__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-size: smaller;
-    margin: 0px;
-}
-
+// Image
 mat-card img {
     object-fit: cover;
     height: 250px;
@@ -34,4 +28,13 @@ mat-card img {
     bottom: 0;
     display: block;
     margin: auto;
+}
+
+// Content
+.mat-card-content__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: smaller;
+    margin: 0px;
 }

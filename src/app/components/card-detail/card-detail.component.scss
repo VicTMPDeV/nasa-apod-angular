@@ -2,43 +2,90 @@
     border-radius: 25px;
 }
 
-.mat-card-header__detail {
-    justify-content: center;
-    align-items: center;
-    padding-left: 0px;
-    padding-right: 0px;
+@media screen and (max-width: 480px) {
+
+    // Header
+    .mat-card-header__detail {
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .mat-card-header-text__detail {
+        font-size: medium;
+        padding-bottom: 4px;
+    }
+
+    // Image
+    mat-card > img {
+        object-fit: cover;
+    }
+
+    // Content
+    .mat-card-content__detail {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .mat-card-content__detail>p {
+        font-size: medium;
+        margin: 15px;
+        text-align: justify;
+    }
+
+    .mat-card-content__detail>em {
+        font-size: small;
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
 }
 
-.mat-card-header-text__detail {
-    font-size: x-large;
-    padding-bottom: 5px;
+@media screen and (min-width: 481px) {
+
+    // Header
+    .mat-card-header__detail {
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .mat-card-header-text__detail {
+        font-size: large;
+    }
+
+    // Image
+    mat-card > img {
+        object-fit: scale-down;
+        height: 400px;
+        background-color: black;
+    }
+
+    // Content
+    .mat-card-content__detail {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+    }
 }
 
+// Content
 .mat-card-content__detail {
     display: flex;
     flex-direction: column;
     margin: 0px;
 }
 
-.mat-card-content__detail > p {
+.mat-card-content__detail>p {
     font-size: medium;
+    margin: 15px;
+    text-align: justify;
 }
 
-.mat-card-content__detail > em {
-    font-size: smaller;
-}
-
-mat-card img {
-    object-fit: cover;
-    height: 350px;
-}
-
-.mat-card-image__detail-play {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    margin: auto;
+.mat-card-content__detail>em {
+    font-size: small;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-bottom: 5px;
 }

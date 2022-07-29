@@ -5,7 +5,7 @@ import { NasaApiService } from '../../shared/services/nasa-api.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styles: []
 })
 export class DashboardComponent implements OnInit {
 

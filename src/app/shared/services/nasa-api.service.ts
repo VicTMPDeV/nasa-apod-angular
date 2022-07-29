@@ -29,11 +29,11 @@ export class NasaApiService {
                                           })
   }
 
-  public getPicture( pictureId: string ): Observable<PictureDto> {
+  public getPicture( pictureDate: string ): Observable<PictureDto> {
     return this._http.get<PictureDto>(`${environment.API_URL}${this.APODEndpoint}`, 
                                         {params: this.queryParams
                                           .set('api_key',environment.API_KEY)
-                                          .set('date', pictureId)
+                                          .set('date', pictureDate)
                                           .set('thumbs', this.thumbValue) 
                                         });                          
   }

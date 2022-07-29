@@ -5,17 +5,21 @@
 .mat-card-header__dashboard {
     justify-content: center;
     align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .mat-card-header-text__dashboard {
-    font-size: medium;
+    font-size: 15px;
+    margin: 0px;
 }
 
 .mat-card-content__dashboard {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-size: small;
+    font-size: smaller;
+    margin: 0px;
 }
 
 mat-card img {

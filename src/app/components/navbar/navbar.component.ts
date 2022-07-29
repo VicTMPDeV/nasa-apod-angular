@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { NavigationService } from 'src/app/shared/services/navigation.service';
 
 @Component({
@@ -6,24 +7,28 @@ import { NavigationService } from 'src/app/shared/services/navigation.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 
+  public navServSubscription!: Subscription;
   private readonly mainUrl: string[] = ['/','/dashboard']; 
-  public onDashBoardPage: boolean = JSON.parse(localStorage.getItem('onDashBoardPage')!) ?? true;
+  public onDashBoardPage!: boolean;
   public logoImage: string = '../../../assets/img/nasa-favicon.png';
 
   constructor(private _navigationService: NavigationService){}
 
   ngOnInit(): void {
-    this._navigationService.getCurrentUrl()
+    this.navServSubscription = this._navigationService.getCurrentUrl()
       .subscribe((currentUrl: string) => {
         (this.mainUrl.includes(currentUrl)) ? this.onDashBoardPage = true : this.onDashBoardPage = false;
-        localStorage.setItem('onDashBoardPage', JSON.stringify(this.onDashBoardPage));
       });
   }
 
   public goBack(): void {
     this._navigationService.getBackLocation();
+  }
+
+  ngOnDestroy(): void {
+    this.navServSubscription.unsubscribe();
   }
 
 }

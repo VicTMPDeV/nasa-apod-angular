@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DetailComponent } from './detail.component';
+import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { DetailRoutingModule } from './detail-routing.module';
-import { CardPictureModule } from '../../components/card-picture/card-picture.module';
+import { DetailComponent } from './detail.component';
+import { CardDetailModule } from '../../components/card-detail/card-detail.module';
 
 
 
@@ -13,7 +15,9 @@ import { CardPictureModule } from '../../components/card-picture/card-picture.mo
   imports: [
     CommonModule,
     DetailRoutingModule,
-    CardPictureModule
+    FlexLayoutModule,
+    CardDetailModule,
+    MatProgressSpinnerModule
   ]
 })
 export class DetailModule { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PictureDto } from '../../models/pictureDto.interface';
+import { NasaApiService } from '../../shared/services/nasa-api.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  public pictureDetail!: PictureDto;
 
-  ngOnInit(): void {
+  constructor(private _nasaApiService: NasaApiService) { }
+
+  ngOnInit(): void { //usar activated route para obtener el id del url activo y peticionar
+    // this._nasaApiService.getPicture().subscribe(console.log);
   }
 
 }

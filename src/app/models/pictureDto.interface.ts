@@ -7,7 +7,7 @@ export interface PictureDto {
     url:             string;
     hdurl?:          string; 
     thumbnail_url?:  string;
-    media_type:      MediaType; //TODO-> GESTIONARLO, SI VIENE UN VIDEO QUE HACER -> HAY UN PARAMETRO PARA EL THUMBNAIL
+    media_type:      MediaType;
     explanation:     string;
     service_version: string;
     copyright?:      string;

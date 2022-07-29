@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from "@angular/material/card";
-import { CardPictureComponent } from './card-picture.component';
+import { CardDetailComponent } from './card-detail.component';
 import { ImagePipeModule } from 'src/app/shared/pipes/image-pipe/image.module';
-import { TruncateTextPipeModule } from 'src/app/shared/pipes/truncate-text-pipe/truncate-text.module';
 import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-date.module';
+
 
 
 @NgModule({
   declarations: [
-    CardPictureComponent
+    CardDetailComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
     ImagePipeModule,
-    I18nDatePipeModule,
-    TruncateTextPipeModule
+    I18nDatePipeModule
   ],
   exports: [
-    CardPictureComponent
+    CardDetailComponent
   ]
 })
-export class CardPictureModule { }
+export class CardDetailModule { }

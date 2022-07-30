@@ -12,6 +12,6 @@ export class CardDetailComponent {
   @Input()
   public picture!:PictureDto;
 
-  public video:string = MediaType.Video;
+  public image:string = MediaType.Image;
   
 }

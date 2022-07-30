@@ -17,8 +17,13 @@
     }
 
     // Image
-    mat-card > img {
+    mat-card>img {
         object-fit: cover;
+    }
+
+    // Video
+    .mat-card-video {
+        height: 300px;
     }
 
 }
@@ -39,10 +44,15 @@
     }
 
     // Image
-    mat-card > img {
+    mat-card>img {
         object-fit: scale-down;
         height: 525px;
         background-color: black;
+    }
+
+    // Video
+    .mat-card-video {
+        height: 525px;
     }
 
 }
@@ -60,7 +70,7 @@ p {
     text-align: justify;
 }
 
-.mat-card-content__detail > em {
+.mat-card-content__detail>em {
     font-size: small;
     align-self: flex-end;
     margin-right: 15px;

@@ -4,9 +4,16 @@
         <mat-card-title class="mat-card-header-text__detail">{{picture.title}}</mat-card-title>
     </mat-card-header>
 
-    <img mat-card-image [src]="picture | imagePipe" [alt]="picture.title">
-    <img *ngIf="picture.media_type === video" class="mat-card-image__detail-play"
-        src="../../../assets/img/video-play-icon.png" alt="play-icon">
+    <img *ngIf="picture.media_type === image; else isVideo" 
+         mat-card-image [src]="picture | imagePipe" 
+         [alt]="picture.title">
+
+    <ng-template #isVideo>
+        <video mat-card-image class="mat-card-video" controls>
+            <source src="https://www.youtube.com/embed/ts0Ek3nLHew?rel=0" type="video/mp4">
+        </video>
+    </ng-template>
+         
 
     <mat-card-content class="mat-card-content__detail">
         <mat-tab-group animationDuration="0ms">

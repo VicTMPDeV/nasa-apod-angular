@@ -9,9 +9,7 @@
          [alt]="picture.title">
 
     <ng-template #isVideo>
-        <video mat-card-image class="mat-card-video" controls>
-            <source src="https://www.youtube.com/embed/ts0Ek3nLHew?rel=0" type="video/mp4">
-        </video>
+        <iframe mat-card-image class="mat-card-iframe" [src]="picture.url | secure"></iframe>
     </ng-template>
          
 

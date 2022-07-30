@@ -4,6 +4,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatTabsModule } from '@angular/material/tabs';
 import { ImagePipeModule } from 'src/app/shared/pipes/image-pipe/image.module';
 import { CardDetailComponent } from './card-detail.component';
+import { SecurePipeModule } from '../../shared/pipes/secure-pipe/secure.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CardDetailComponent } from './card-detail.component';
     CommonModule,
     MatCardModule,
     MatTabsModule,
-    ImagePipeModule
+    ImagePipeModule,
+    SecurePipeModule
   ],
   exports: [
     CardDetailComponent

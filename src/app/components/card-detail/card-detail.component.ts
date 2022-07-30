@@ -9,9 +9,9 @@ import { MediaType } from "src/app/models/media-type.interface";
 })
 export class CardDetailComponent {
 
-  @Input('pictureData')
+  @Input()
   public picture!:PictureDto;
 
-  public video:string = MediaType.Video;
+  public image:string = MediaType.Image;
   
 }

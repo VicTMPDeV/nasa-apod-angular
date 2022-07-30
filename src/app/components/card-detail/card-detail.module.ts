@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
-import { CardDetailComponent } from './card-detail.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ImagePipeModule } from 'src/app/shared/pipes/image-pipe/image.module';
-import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-date.module';
-
+import { CardDetailComponent } from './card-detail.component';
+import { SecurePipeModule } from '../../shared/pipes/secure-pipe/secure.module';
 
 
 @NgModule({
@@ -14,8 +14,9 @@ import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-dat
   imports: [
     CommonModule,
     MatCardModule,
+    MatTabsModule,
     ImagePipeModule,
-    I18nDatePipeModule
+    SecurePipeModule
   ],
   exports: [
     CardDetailComponent

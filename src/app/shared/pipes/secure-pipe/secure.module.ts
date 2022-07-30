@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { I18nDatePipe } from './i18n-date.pipe';
+import { SecurePipe } from './secure.pipe';
+
 
 
 @NgModule({
   declarations: [
-    I18nDatePipe
+    SecurePipe
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    I18nDatePipe
+    SecurePipe
   ]
 })
-export class I18nDatePipeModule { }
+export class SecurePipeModule { }

@@ -1,1 +1,8 @@
-<p>detail works!</p>
+<div *ngIf="pictureDetail; else noResponseYet">
+    <div fxLayout="column" fxLayoutAlign="center" fxFlex="100">
+        <app-card-detail [picture]="pictureDetail"></app-card-detail>
+    </div>
+</div>
+<ng-template #noResponseYet>
+    <app-spinner></app-spinner>
+</ng-template>

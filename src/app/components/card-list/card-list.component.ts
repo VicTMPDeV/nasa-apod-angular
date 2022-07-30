@@ -4,10 +4,10 @@ import { MediaType } from "src/app/models/media-type.interface";
 
 @Component({
   selector: 'app-card-picture',
-  templateUrl: './card-picture.component.html',
-  styleUrls: ['./card-picture.component.scss']
+  templateUrl: './card-list.component.html',
+  styleUrls: ['./card-list.component.scss']
 })
-export class CardPictureComponent {
+export class CardListComponent {
 
   @Input('pictureData')
   public picture!:PictureDto;

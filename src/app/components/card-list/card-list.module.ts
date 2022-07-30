@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
-import { CardListComponent } from './card-list.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ImagePipeModule } from 'src/app/shared/pipes/image-pipe/image.module';
 import { TruncateTextPipeModule } from 'src/app/shared/pipes/truncate-text-pipe/truncate-text.module';
-import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-date.module';
+import { CardListComponent } from './card-list.component';
 
 
 @NgModule({
@@ -14,8 +14,8 @@ import { I18nDatePipeModule } from 'src/app/shared/pipes/i18n-date-pipe/i18n-dat
   imports: [
     CommonModule,
     MatCardModule,
+    MatTooltipModule,
     ImagePipeModule,
-    I18nDatePipeModule,
     TruncateTextPipeModule
   ],
   exports: [

@@ -2,6 +2,31 @@
     border-radius: 25px;
 }
 
+::ng-deep .tooltip-card {
+    background: #033A92;
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+
+    // Image
+    mat-card img {
+        object-fit: cover;
+        height: 250px;
+    }
+
+}
+
+@media screen and (min-width: 481px) {
+
+    // Image
+    mat-card img {
+        object-fit: cover;
+        height: 350px;
+    }
+
+}
+
 // Header
 .mat-card-header__list {
     justify-content: center;
@@ -12,12 +37,6 @@
 
 .mat-card-header-text__list {
     font-size: medium;
-}
-
-// Image
-mat-card img {
-    object-fit: cover;
-    height: 250px;
 }
 
 .mat-card-image__list-play {
@@ -35,6 +54,6 @@ mat-card img {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-size: smaller;
-    margin: 0px;
+    font-size: small;
+    margin-right: 10px;
 }

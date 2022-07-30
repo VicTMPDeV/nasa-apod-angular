@@ -1,7 +1,12 @@
 <mat-card class="mat-card__list">
 
     <mat-card-header class="mat-card-header__list">
-        <mat-card-title class="mat-card-header-text__list">{{picture.title | truncateText:30}}</mat-card-title>
+        <mat-card-title class="mat-card-header-text__list"
+                        [matTooltip]="picture.title"
+                        matTooltipShowDelay="1000"
+                        matTooltipClass="tooltip-card">
+            {{picture.title | truncateText:30}}
+        </mat-card-title>
     </mat-card-header>
 
     <img mat-card-image [src]="picture | imagePipe" [alt]="picture.title">
@@ -10,7 +15,7 @@
          src="../../../assets/img/video-play-icon.png" alt="play-icon">
     
     <mat-card-content class="mat-card-content__list">
-        <em>Fecha: {{picture.date | i18nDate:'-'}}</em>
+        <em>Date: {{picture.date}}</em>
     </mat-card-content>
 
 </mat-card>

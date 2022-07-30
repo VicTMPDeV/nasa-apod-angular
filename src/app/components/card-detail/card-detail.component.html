@@ -5,13 +5,16 @@
     </mat-card-header>
 
     <img mat-card-image [src]="picture | imagePipe" [alt]="picture.title">
-    <img *ngIf="picture.media_type === video"
-         class="mat-card-image__detail-play" 
-         src="../../../assets/img/video-play-icon.png" alt="play-icon">
-    
+    <img *ngIf="picture.media_type === video" class="mat-card-image__detail-play"
+        src="../../../assets/img/video-play-icon.png" alt="play-icon">
+
     <mat-card-content class="mat-card-content__detail">
-        <p>{{picture.explanation}}</p>
-        <em>Fecha: {{picture.date | i18nDate:'-'}}</em>
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="Description: ">
+                <p>{{picture.explanation}}</p>
+            </mat-tab>
+        </mat-tab-group>
+        <em>Date: {{picture.date}}</em>
     </mat-card-content>
 
 </mat-card>

@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './components/footer/footer.module';
 import { NavbarModule } from './components/navbar/navbar.module';
+import { NotFoundModule } from './shared/errors/not-found/not-found.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NavbarModule } from './components/navbar/navbar.module';
     BrowserAnimationsModule,
     HttpClientModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    NotFoundModule
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

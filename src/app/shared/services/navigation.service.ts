@@ -24,4 +24,8 @@ export class NavigationService {
     this._location.back();
   }
 
+  public goHome(): void{
+    this._router.navigateByUrl('/dashboard');
+  }
+
 }

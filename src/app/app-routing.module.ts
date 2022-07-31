@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './shared/errors/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -11,10 +12,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/detail/detail.module').then( m => m.DetailModule)
   },
   {
+    path:'not-found',
+    component: NotFoundComponent
+  },
+  {
     path: '', redirectTo: 'dashboard', pathMatch:'full'
   },
   {
-    path:'**', redirectTo: 'dashboard', pathMatch:'full' //poner componente notfound
+    path:'**', redirectTo: 'not-found', pathMatch:'full'
   }
 ];
 

@@ -1,0 +1,17 @@
+import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
+
+@Component({
+  selector: 'app-not-found',
+  templateUrl: './not-found.component.html',
+  styleUrls: ['./not-found.component.scss']
+})
+export class NotFoundComponent {
+
+  constructor(private _navigationService: NavigationService) { }
+
+  public goHome(){
+    this._navigationService.goHome();
+  }
+
+}

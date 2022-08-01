@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SecurePipe } from './secure.pipe';
-
+import { SecurePipe } from '@pipes/secure-pipe/secure.pipe';
 
 
 @NgModule({

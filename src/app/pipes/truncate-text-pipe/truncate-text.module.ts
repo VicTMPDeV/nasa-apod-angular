@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TruncateTextPipe } from "./truncate-text.pipe";
-
+import { TruncateTextPipe } from "@pipes/truncate-text-pipe/truncate-text.pipe";
 
 
 @NgModule({
@@ -10,7 +9,7 @@ import { TruncateTextPipe } from "./truncate-text.pipe";
   ],
   imports: [
     CommonModule
-  ], 
+  ],
   exports: [
     TruncateTextPipe
   ]

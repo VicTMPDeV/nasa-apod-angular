@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { PictureDto } from 'src/app/models/pictureDto.interface';
-import { MediaType } from "src/app/models/media-type.interface";
+import { PictureDto } from '@models/pictureDto.interface';
+import { MediaType } from "@models/media-type.interface";
 
 @Component({
   selector: 'app-card-picture',

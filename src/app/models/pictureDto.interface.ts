@@ -1,4 +1,4 @@
-import { MediaType } from "./media-type.interface";
+import { MediaType } from "@models/media-type.interface";
 
 export interface PictureDto {
 

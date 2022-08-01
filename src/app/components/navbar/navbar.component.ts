@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NavigationService } from 'src/app/shared/services/navigation.service';
+import { NavigationService } from '@services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   public navServSubscription!: Subscription;
   private readonly mainUrl: string[] = ['/','/dashboard']; 
   public onDashBoardPage!: boolean;
-  public logoImage: string = '../../../assets/img/nasa-favicon.png';
+  public logoImage: string = 'assets/img/nasa-favicon.png';
 
   constructor(private _navigationService: NavigationService){}
 

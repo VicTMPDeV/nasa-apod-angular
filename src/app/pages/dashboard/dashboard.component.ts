@@ -14,8 +14,6 @@ export class DashboardComponent implements OnInit {
 
   private readonly today: Date = new Date();
   public picturesList: PictureDto[] = [];
-  public hasError: boolean = false;
-  public errorMessage: string = '';
   public CONST = Constants;
 
   constructor(private _nasaApiService: NasaApiService,
@@ -30,20 +28,10 @@ export class DashboardComponent implements OnInit {
           });
         },
         error: (errorResponse: HttpErrorResponse) => {
-          this.hasError = true;
-          this.errorMessage = errorResponse.error.msg;
-          this.goToErrorPage();
-          this.showErrorMessage();
+          console.log(errorResponse.error.msg);
+          this._navigationService.getErrorPage();
         }
       })
-  }
-
-  public showErrorMessage(): void {
-    alert(this.errorMessage);
-  }
-
-  public goToErrorPage(): void{
-    this._navigationService.getErrorPage();
   }
 
 }

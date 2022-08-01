@@ -13,7 +13,6 @@ import { NavigationService } from '@services/navigation.service';
 export class DetailComponent implements OnInit {
 
   public pictureDetail!: PictureDto;
-  public hasError: boolean = false;
   public errorMessage: string = '';
 
   constructor(private _nasaApiService: NasaApiService,
@@ -26,21 +25,12 @@ export class DetailComponent implements OnInit {
         next: (response: PictureDto) => {
           this.pictureDetail = response;
         },
-        error: (err: HttpErrorResponse) => {
-          this.hasError = true;
-          this.errorMessage = err.error.msg;
-          this.goToErrorPage();
-          this.showErrorMessage();
+        error: (errorResponse: HttpErrorResponse) => {
+          console.log(errorResponse.error.msg);
+          this._navigationService.getErrorPage();
         }
       })
   }
 
-  public showErrorMessage(): void {
-    alert(this.errorMessage);
-  }
-
-  public goToErrorPage(): void{
-    this._navigationService.getErrorPage();
-  }
 
 }

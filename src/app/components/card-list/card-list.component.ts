@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Constants } from '@constants/constants';
 import { PictureDto } from '@models/pictureDto.interface';
 import { MediaType } from "@models/media-type.interface";
 
@@ -13,5 +14,7 @@ export class CardListComponent {
   public picture!:PictureDto;
 
   public video:string = MediaType.Video;
+
+  public CONST = Constants;
 
 }

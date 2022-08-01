@@ -1,7 +1,7 @@
 <div *ngIf="picturesList.length != 0; else noResponseYet">
     <div fxLayoutAlign="center" fxLayoutGap="25px grid" fxLayout="row wrap" fxLayout.lt-md="column">
         <div *ngFor="let picture of picturesList" fxFlex="33.3">
-            <app-card-picture [pictureData]="picture" [routerLink]="['/detail', picture.date]"></app-card-picture>
+            <app-card-picture [pictureData]="picture" [routerLink]="[CONST.ROUTE_DETAIL, picture.date]"></app-card-picture>
         </div>
     </div>
 </div>

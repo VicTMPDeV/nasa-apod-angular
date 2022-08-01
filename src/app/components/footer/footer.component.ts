@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Constants } from '@constants/constants';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
+  public CONST = Constants;
 
   public timeStamp: number = new Date().getFullYear();
 

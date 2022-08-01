@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { Constants } from '@constants/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -25,11 +26,11 @@ export class NavigationService {
   }
 
   public getHomePage(): void{
-    this._router.navigateByUrl('/dashboard');
+    this._router.navigateByUrl(Constants.ROUTE_DASHBOARD);
   }
 
   public getErrorPage(): void{
-    this._router.navigateByUrl('not-found');
+    this._router.navigateByUrl(Constants.ROUTE_NOT_FOUND);
   }
 
 }

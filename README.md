@@ -14,7 +14,11 @@ fecha pasada por parámetros hasta N días antes, siendo N un parámetro numéri
 fecha introducida como primer parámetro (el componente al suscribirse al observable se encarga de seleccionar 
 la fecha del día actual).
 
-El otro método del servicio peticiona una imagen dada una fecha.
+El otro método del servicio peticiona una imagen dada una fecha. Si bien proporciona la misma respuesta, y podría
+haberse implementado algún mecanismo para no peticionar el detalle a la API nuevamente, sino traerlo directamente
+desde la respuesta del listado previa, pero se ha considerado que es un comportamiento poco común, ya que normalmente
+las APIS suelen traer diferente información a la hora de pedir detalles que a la hora de traer listados, y se ha optado
+por realizar una nueva petición GET, por ser lo más habitual como se ha comentado antes.
 
 Como la API puede devolver tanto imágenes como vídeos, en la documentación de la misma se indica el uso opcional
 de un parámetro 'thumbs' booleano, el cual, informado a true, trae un dato adicional en la respuesta, 'thumbnail_url'
@@ -23,6 +27,20 @@ ha informado dicho parámetro con el valor true para obtenerlo y usarlo.
 
 Se ha optado por no hacer uso de las imágenes en hd por su elevado tamaño y consumo de datos, sobre todo en 
 dispositivos móviles.
+
+Bajo el paraguas de el media-type: video, a veces vienen ficheros multimedia ejecutables, por lo que se ha optado por 
+insertar un iframe con un pipe de seguridad para evitar bloqueos CORB).
+
+Para poder obtener una buena variabilidad de las respuestas se han peticionado las ultimas del año completo y se
+ha observado que algunos campos de thumbnails a veces vienen con la url vacía, o incluso lo anteriormente mencionado
+de los videos que es como un "cajón desastre" donde se mete todo lo que no es imagen. Se ha tenido en cuenta todo
+esto en el desarrollo para proveer imágenes en ausencia de las mismas, así como redirecciones a página de error cuando
+se captura un error 404 del lado del servidor (pidiendo fechas anteriores a 1995-06-16 o superiores a la actual, o poniendo
+datos sin coherencia, como 2022-06-36, el cual devuelve un mensaje de error diferente desde el back, teniendo muy controlado
+el tipo de error que produce).
+
+Se facilitan las siguientes fechas para archivos que no son imágenes para su testeo:
+2021-07-13 , 2021-07-14 , 2021-08-02 , 2021-08-25 , 2021-09-05 , 2022-06-19 (esta última no trae thumb)
 
 Para poder realizar un correcto tipado de las respuestas se ha creado un modelo representativo de la respuesta 
 proporcionada por la API, el cual ha sido generado usando la siguiente web app: https://app.quicktype.io/
@@ -38,14 +56,16 @@ El routing del proyecto se ha desarrollado teniendo en cuenta que dashboard y de
 quedando la segunda anidada dentro de la primera y haciendo el cambio de una a otra al tocar la card correspondiente
 del dashboard.
 
-La página de detalle se referencia por la fecha de la imagen, la cual puede ser explotada para traer cualquier imagen de cualquier fecha que se indique en la url y que incluso, a futuro, podría implementarse un widget de calendario que
-permitiera explotar esta funcionalidad, la cual no se pide, por lo tanto no se desarrolla.
+La página de detalle se referencia por la fecha de la imagen, la cual puede ser explotada para traer cualquier imagen de cualquier fecha que se indique en la url 
+y que incluso, a futuro, podría implementarse un widget de calendario que permitiera explotar esta funcionalidad, la cual no se pide, por lo tanto no se desarrolla.
 
 La API sólo dispone de imágenes desde 1995, y una fecha inferior produciría un error que habría que manejar (al igual
 que una fecha superior a la actual). Se ha tenido en cuenta esto en el desarrollo y se controla redirigiendo a una 
 página de error.
 
-Se ha procurado ilustrar múltiples funcionalidades de Angular para el desarrollo de la prueba. Si bien muchas se pueden resolver de diferentes maneras, no he querido dejar de ilustrar el uso de pipes personalizados, comunicación nativa entre componentes relacionados padre/hijo mediante el uso de decoradores @input y @output donde ha sido posible, comunicación entre componentes no relacionados haciendo uso de servicios y Observables en lugar de Promises en la medida de lo posible.
+Se ha procurado ilustrar múltiples funcionalidades de Angular para el desarrollo de la prueba. Si bien muchas se pueden resolver de diferentes maneras, no he querido 
+dejar de ilustrar el uso de pipes personalizados, comunicación nativa entre componentes relacionados padre/hijo mediante el uso de decoradores @input y @output donde 
+ha sido posible, comunicación entre componentes no relacionados haciendo uso de servicios y Observables en lugar de Promises en la medida de lo posible.
 
 ## Development server
 

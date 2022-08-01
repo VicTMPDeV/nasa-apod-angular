@@ -12,10 +12,10 @@
     <img mat-card-image [src]="picture | imagePipe" [alt]="picture.title">
     <img *ngIf="picture.media_type === video"
          class="mat-card-image__list-play" 
-         src="assets/img/video-play-icon.png" alt="play-icon">
+         [src]="CONST.VIDEO_PLAY" alt="play-icon">
     
     <mat-card-content class="mat-card-content__list">
-        <em>Date: {{picture.date}}</em>
+        <em>{{CONST.DATE_LABEL}}{{picture.date}}</em>
     </mat-card-content>
 
 </mat-card>

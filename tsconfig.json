@@ -26,6 +26,9 @@
       "@components/*": [
         "src/app/components/*"
       ],
+      "@constants/*": [
+        "src/app/constants/*"
+      ],
       "@errors/*": [
         "src/app/errors/*"
       ],

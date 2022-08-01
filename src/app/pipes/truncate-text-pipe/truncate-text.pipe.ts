@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Constants } from '@constants/constants';
 
 
 @Pipe({
@@ -6,10 +7,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TruncateTextPipe implements PipeTransform {
 
-  transform(text: string, length: number = 20, suffix: string = '...'): string {
+  transform(text: string, length: number = Constants.TWENTY, suffix: string = '...'): string {
 
     if (text.length > length) {
-      let truncated: string = text.substring(0, length).trim() + suffix;
+      let truncated: string = text.substring(Constants.ZERO, length).trim() + suffix;
       return truncated;
     }
 

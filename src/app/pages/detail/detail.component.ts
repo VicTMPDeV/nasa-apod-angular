@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { PictureDto } from '../../models/pictureDto.interface';
-import { NasaApiService } from '../../shared/services/nasa-api.service';
-import { NavigationService } from '../../shared/services/navigation.service';
+import { PictureDto } from '@models/pictureDto.interface';
+import { NasaApiService } from '@services/nasa-api.service';
+import { NavigationService } from '@services/navigation.service';
 
 @Component({
   selector: 'app-detail',
@@ -31,7 +31,6 @@ export class DetailComponent implements OnInit {
           this.errorMessage = err.error.msg;
           this.goToErrorPage();
           this.showErrorMessage();
-          console.log(err.error.msg);
         }
       })
   }

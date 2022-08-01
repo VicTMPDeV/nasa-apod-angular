@@ -4,8 +4,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { NotFoundComponent } from './not-found.component';
-
+import { NotFoundComponent } from '@pages/not-found/not-found.component';
 
 
 @NgModule({

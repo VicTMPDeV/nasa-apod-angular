@@ -10,8 +10,8 @@ export class NotFoundComponent {
 
   constructor(private _navigationService: NavigationService) { }
 
-  public goHome(){
-    this._navigationService.goHome();
+  public goToHomePage(): void{
+    this._navigationService.getHomePage();
   }
 
 }

@@ -24,8 +24,12 @@ export class NavigationService {
     this._location.back();
   }
 
-  public goHome(): void{
+  public getHomePage(): void{
     this._router.navigateByUrl('/dashboard');
+  }
+
+  public getErrorPage(): void{
+    this._router.navigateByUrl('not-found');
   }
 
 }
